@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register to Rockey Club</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #A69080;
+        }
+        body {
+            background-color: #3E362E;
+            font-family: 'Century Gothic', sans-serif; 
+            min-height: 100vh; 
+            display: flex;
+            align-items: center;
+            border-radius: 15px;
+        }
+        .tab-content {
+            padding-top: 20px;
+        }
+        .form-floating {
+            margin-bottom: 1rem;
+        }
+        .btn-primary {
+            width: 100%;
+            padding: 10px;
+            background-color: #3F251B !important;
+            border-radius: 15px;
+        }
+        .btn-primary:hover {
+            background-color: #3F251B !important;  
+            border-color: #3F251B;
+        }
+        .nav-link {
+            color: #3F251B !important; /* This matches your button color */
+        }
+
+        .nav-link.active {
+            background-color: transparent !important;
+            color: #3F251B !important;
+            font-weight: bold;
+        }
+
+        .nav-tabs {
+            border-bottom: 1px solid #3F251B;
+        }
+
+        .nav-tabs .nav-link:focus,
+        .nav-tabs .nav-link:hover {
+            border-color: #3F251B;
+            color: #3F251B !important;
+        }
+
+        .nav-tabs .nav-link.active {
+            border-color: #3F251B #3F251B transparent;
+        }
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <div class="form-container">
+                <h2 class="text-center"><b>RockeyClub</b></h2>
+                <br>
+                <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#login" type="button">Login</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#register" type="button">Register</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="myTabContent">
+                    <!-- Login Form -->
+                    <div class="tab-pane fade show active" id="login">
+                        <form id="loginForm">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
+                                <label for="loginEmail">Email address</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                                <label for="loginPassword">Password</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">
+                                    Remember me
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+
+                    <!-- Registration Form -->
+                    <div class="tab-pane fade" id="register">
+                        <form id="registerForm">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="registerName" placeholder="Full Name" required>
+                                <label for="registerName">Full Name</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="registerEmail" placeholder="name@example.com" required>
+                                <label for="registerEmail">Email address</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="registerPassword" placeholder="Password" required>
+                                <label for="registerPassword">Password</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                                <label for="confirmPassword">Confirm Password</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
